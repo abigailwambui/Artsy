@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/artsy1" />
 
     <TextView
         android:id="@+id/artsyTextView"
@@ -21,8 +27,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="WELCOME"
         android:id="@+id/findRestaurantsButton"
+        android:background="@color/colorPrimaryText"
+        android:textColor="@color/colorTextIcons"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 
