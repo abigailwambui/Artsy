@@ -14,7 +14,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.welcomeButton) Button mWelcomeButton;
     @BindView(R.id.artsyTextView) TextView mArtsyTextView;
 
@@ -27,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
         Typeface adalgisaFont = Typeface.createFromAsset(getAssets(), "fonts/Adalgisa Personal Use.ttf");
         mArtsyTextView.setTypeface(adalgisaFont);
 
-        mWelcomeButton.setOnClickListener(new View.OnClickListener(){
+        mWelcomeButton.setOnClickListener(this);
+    }
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, SignInActivity.class);
                 startActivity(intent);
             }
-        });
+
     }
-}
+
