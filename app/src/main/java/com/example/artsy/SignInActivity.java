@@ -33,7 +33,7 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(SignInActivity.this, "Welcome", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(SignInActivity.this, SignInActivity.class);
+                Intent intent = new Intent(SignInActivity.this, ArtsActivity.class);
                 startActivity(intent);
             }
         });
