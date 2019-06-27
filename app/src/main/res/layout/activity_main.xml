@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="WELCOME"
-        android:id="@+id/findRestaurantsButton"
+        android:id="@+id/welcomeButton"
         android:background="@color/colorPrimaryText"
         android:textColor="@color/colorTextIcons"
         android:layout_alignParentBottom="true"
