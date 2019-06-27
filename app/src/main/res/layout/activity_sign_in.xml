@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
+    <TextView
+        android:id="@+id/textViewMain"
+        android:layout_width="384dp"
+        android:layout_height="94dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="SIGN IN OR LOGIN"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEditText"
+        android:background="@color/colorTextIcons"
+        android:layout_below="@+id/textViewMain"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:hint="Enter Name"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailEditText"
+        android:background="@color/colorTextIcons"
+        android:layout_below="@id/nameEditText"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:hint="Enter Email Address"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordEditText"
+        android:background="@color/colorTextIcons"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:hint="Enter Password"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/submitKenyanConstitution"
+        android:layout_width="387dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/colorPrimaryText"
+        android:text="Submit" />
+
 </RelativeLayout>
