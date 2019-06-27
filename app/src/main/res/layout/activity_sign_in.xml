@@ -53,7 +53,7 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/submitKenyanConstitution"
+        android:id="@+id/submitartsy"
         android:layout_width="387dp"
         android:layout_height="0dp"
         android:layout_below="@+id/passwordEditText"
