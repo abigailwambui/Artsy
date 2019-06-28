@@ -2,11 +2,14 @@ package com.example.artsy.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.artsy.R;
+import com.example.artsy.adapters.ArtListAdapter;
 import com.example.artsy.models.Artsy;
 import com.example.artsy.services.ArtsyService;
 
@@ -21,8 +24,9 @@ import okhttp3.Response;
 
 public class ArtsActivity extends AppCompatActivity {
     public static final String TAG = ArtsActivity.class.getSimpleName();
-    @BindView(R.id.listView)
+    @BindView(R.id.recyclerView)RecyclerView mRecyclerView;
     ListView mListView;
+    private ArtListAdapter mAdapter;
     public ArrayList<Artsy> mArtsies = new ArrayList<>();
 
     @Override
@@ -49,29 +53,15 @@ public class ArtsActivity extends AppCompatActivity {
 
                     @Override
                     public void run() {
-                        String[] artsyDescription = new String[mArtsies.size()];
-                        for (int i = 0; i < artsyDescription.length; i++) {
-                            artsyDescription[i] = mArtsies.get(i).getDescription();
-                        }
-                        ArrayAdapter adapter = new ArrayAdapter(ArtsActivity.this,
-                                android.R.layout.simple_list_item_1, artsyDescription);
-                        mListView.setAdapter(adapter);
-                        for (Artsy art : mArtsies) {
-                            Log.d(TAG, "Description: " + art.getDescription());
-                            Log.d(TAG, "PrimaryImageUrl: " + art.getPrimaryImageUrl());
-                            Log.d(TAG, "Culture: " + art.getCulture());
-                            Log.d(TAG, "Title: " + art.getTitle());
-                            Log.d(TAG, "CreditLine " + art.getCreditLine());
-                            Log.d(TAG, "Medium" + art.getMedium());
-
-
-                        }
-
-
+                        mAdapter = new ArtListAdapter(getApplicationContext(), mArtsies);
+                        mRecyclerView.setAdapter(mAdapter);
+                        RecyclerView.LayoutManager layoutManager =
+                                new LinearLayoutManager(ArtsActivity.this);
+                        mRecyclerView.setLayoutManager(layoutManager);
+                        mRecyclerView.setHasFixedSize(true);
                     }
                 });
             }
-
         });
     }
 }

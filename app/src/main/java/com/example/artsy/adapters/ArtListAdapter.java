@@ -22,7 +22,7 @@ public class ArtListAdapter extends RecyclerView.Adapter<ArtListAdapter.ArtViewH
 
     public ArtListAdapter(Context context, ArrayList<Artsy> mArtsies) {
         mContext = context;
-        mArtsies = artsies;
+        this.mArtsies = mArtsies;
     }
 
     @Override
@@ -30,6 +30,11 @@ public class ArtListAdapter extends RecyclerView.Adapter<ArtListAdapter.ArtViewH
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.art_list_item, parent, false);
         ArtViewHolder viewHolder = new ArtViewHolder(view);
         return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(ArtListAdapter.ArtViewHolder holder, int position) {
+        holder.bindArt(mArtsies.get(position));
     }
 
     @Override
