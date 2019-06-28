@@ -1,6 +1,7 @@
 package com.example.artsy.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,10 @@ import android.widget.TextView;
 
 import com.example.artsy.R;
 import com.example.artsy.models.Artsy;
+import com.example.artsy.ui.ArtDetailActivity;
 import com.squareup.picasso.Picasso;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
@@ -44,7 +48,7 @@ public class ArtListAdapter extends RecyclerView.Adapter<ArtListAdapter.ArtViewH
     }
 
 
-    public class ArtViewHolder extends  RecyclerView.ViewHolder{
+    public class ArtViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.artImageView)ImageView mArtImageView;
         @BindView(R.id.artDescriptionTextView)TextView mDescriptionTextView;
         @BindView(R.id.titleTextView) TextView mTitleTextView;
@@ -56,6 +60,16 @@ public class ArtListAdapter extends RecyclerView.Adapter<ArtListAdapter.ArtViewH
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, ArtDetailActivity.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("restaurants", Parcels.wrap(mArtsies));
+            mContext.startActivity(intent);
         }
 
             public void bindArt(Artsy art) {
