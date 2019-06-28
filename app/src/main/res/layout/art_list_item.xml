@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<ImageView-->
-        <!--android:layout_width="130dp"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:id="@+id/restaurantImageView"-->
-        <!--android:src="@drawable/waffles"-->
-        <!--android:scaleType="centerCrop"/>-->
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:id="@+id/artImageView"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -21,18 +20,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/restaurantNameTextView"
+            android:id="@+id/artDescriptionTextView"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:text="Restaurant Name"
+            android:text="ART DESCRIPTION"
             android:textColor="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="One Cuisine Type"
-            android:id="@+id/categoryTextView"
-            android:layout_below="@+id/restaurantNameTextView"
+            android:id="@+id/titleTextView"
+            android:layout_below="@+id/artDescriptionTextView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:textStyle="italic"/>
@@ -44,8 +43,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rating"
-                android:id="@+id/ratingTextView"
+                android:text="Culture"
+                android:id="@+id/cultureTextView"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorAccent"/>
