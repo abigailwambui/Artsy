@@ -1,4 +1,4 @@
-package com.example.artsy;
+package com.example.artsy.ui;
 
 //import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.artsy.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

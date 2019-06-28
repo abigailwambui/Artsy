@@ -1,4 +1,4 @@
-package com.example.artsy;
+package com.example.artsy.models;
 
 public class Artsy {
     private String mDescription;

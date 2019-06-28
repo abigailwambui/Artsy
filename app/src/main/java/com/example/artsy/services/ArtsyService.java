@@ -1,4 +1,7 @@
-package com.example.artsy;
+package com.example.artsy.services;
+
+import com.example.artsy.Constants;
+import com.example.artsy.models.Artsy;
 
 import org.json.JSONArray;
 import org.json.JSONException;
