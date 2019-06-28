@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="15dp">
 
     <ImageView
         android:layout_width="130dp"
@@ -20,18 +22,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/artDescriptionTextView"
+            android:id="@+id/titleTextView"
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="ART DESCRIPTION"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimaryText"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="One Cuisine Type"
-            android:id="@+id/titleTextView"
-            android:layout_below="@+id/artDescriptionTextView"
+            android:id="@+id/artDescriptionTextView"
+            android:layout_below="@+id/titleTextView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:textStyle="italic"/>
