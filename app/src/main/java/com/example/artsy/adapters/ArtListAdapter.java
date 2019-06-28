@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.artsy.R;
 import com.example.artsy.models.Artsy;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -58,6 +59,7 @@ public class ArtListAdapter extends RecyclerView.Adapter<ArtListAdapter.ArtViewH
         }
 
             public void bindArt(Artsy art) {
+                Picasso.get().load(art.getPrimaryImageUrl()).into(mArtImageView);
                 mDescriptionTextView.setText(art.getDescription());
                 mTitleTextView.setText(art.getTitle());
                 mCultureTextView.setText(art.getCulture());
