@@ -55,14 +55,11 @@
     <Button
         android:id="@+id/submitartsy"
         android:layout_width="387dp"
-        android:layout_height="0dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/passwordEditText"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="0dp"
         android:background="@color/colorPrimaryText"
         android:text="Submit" />
 
