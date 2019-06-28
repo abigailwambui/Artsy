@@ -24,4 +24,5 @@ public class ArtsyService {
         call.enqueue(callback);
 
     }
+
 }
