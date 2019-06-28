@@ -1,12 +1,16 @@
 package com.example.artsy.models;
 
+
+import org.parceler.Parcel;
+
+@Parcel
 public class Artsy {
-    private String mDescription;
-    private String mPrimaryImageUrl;
-    private String mCulture;
-    private String mTitle;
-    private String mCreditLine;
-    private String mMedium;
+     String mDescription;
+     String mPrimaryImageUrl;
+     String mCulture;
+     String mTitle;
+     String mCreditLine;
+     String mMedium;
 
 public Artsy(String description, String primaryImageUrl, String culture, String title, String creditLine, String medium) {
     this.mDescription = description;
