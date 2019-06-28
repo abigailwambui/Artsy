@@ -1,14 +1,22 @@
 package com.example.artsy;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 
 public class ArtsyService {
 
-    public static void findArts( Callback callback) {
+    public static void findArts(Callback callback) {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .build();
@@ -25,4 +33,37 @@ public class ArtsyService {
 
     }
 
+    public ArrayList<Artsy> processResults(Response response) {
+
+        ArrayList<Artsy> artsies = new ArrayList<>();
+        try {
+            String jsonData = response.body().string();
+            JSONObject artsyJSON = new JSONObject(jsonData);
+            JSONArray recordsJSON = artsyJSON.getJSONArray("records");
+            if (response.isSuccessful()) {
+                for (int i = 0; i < recordsJSON.length(); i++) {
+                    JSONObject artJSON = recordsJSON.getJSONObject(i);
+                    String description = artJSON.getString("description");
+                    String primaryImageUrl = artJSON.getString("primaryimageurl");
+                    String culture = artJSON.getString("culture");
+                    String title = artJSON.getString("title");
+                    String creditLine = artJSON.getString("creditline");
+                    String medium = artJSON.getString("medium");
+
+                    Artsy art = new Artsy(description, primaryImageUrl, culture, title, creditLine, medium);
+                    artsies.add(art);
+
+                }
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return artsies;
+    }
 }
+
+
