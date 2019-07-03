@@ -33,11 +33,7 @@ There are no known bugs in the application but if you encounter any please open 
 
 ## Screen Shots
 
-<img src="/READMEimages/artsyhome.jpg" width="20%" />
-
-<img src="/READMEimages/login.jpg" width="20%" />
-
-<img src="/READMEimages/all.jpg" width="20%" />
+<img src="/READMEimages/artsyhome.jpg" width="20%" /> <img src="/READMEimages/login.jpg" width="20%" /> <img src="/READMEimages/all.jpg" width="20%" />
 
 
 <img src="/READMEimages/one.jpg" width="20%" />
