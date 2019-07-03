@@ -1,4 +1,4 @@
-# Lets Cook
+# Artsy
  ![](https://img.shields.io/badge/Android-project-brightgreen.svg)
  ![](https://img.shields.io/badge/Language-Java%20-orange.svg)
 
