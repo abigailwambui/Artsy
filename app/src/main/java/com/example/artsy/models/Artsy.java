@@ -12,6 +12,9 @@ public class Artsy {
      String mCreditLine;
      String mMedium;
 
+
+    public Artsy() {}
+
 public Artsy(String description, String primaryImageUrl, String culture, String title, String creditLine, String medium) {
     this.mDescription = description;
     this.mPrimaryImageUrl = primaryImageUrl;
