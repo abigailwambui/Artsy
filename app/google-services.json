@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336668532515",
+    "firebase_url": "https://artsy-f494a.firebaseio.com",
+    "project_id": "artsy-f494a",
+    "storage_bucket": "artsy-f494a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336668532515:android:92170555039670cd",
+        "android_client_info": {
+          "package_name": "com.example.artsy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336668532515-5u46otd4cv1jnseakupjrp3510aorprg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.artsy",
+            "certificate_hash": "c96d1fff5eda7b2c097956ae98e47a6c47392394"
+          }
+        },
+        {
+          "client_id": "336668532515-monm6uq7085ukbiprm5ivn42lr8t572s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKd0dlQOrD6hNFPWHmqyWWB87FeXK92Z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336668532515-monm6uq7085ukbiprm5ivn42lr8t572s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
