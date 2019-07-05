@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ArtDetailActivity"></activity>
+        <activity android:name=".ui.CreateAcountActivity"></activity>
+        <activity android:name=".ui.ArtDetailActivity" />
         <activity android:name=".ui.ArtsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.artsy.ui.MainActivity"></meta-data>
+                android:value="com.example.artsy.ui.MainActivity" />
         </activity>
         <activity android:name=".ui.SignInActivity" />
         <activity
