@@ -6,11 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.artsy.Constants;
 import com.example.artsy.R;
 import com.example.artsy.models.Artsy;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -21,7 +26,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ArtDetailFragment extends Fragment {
+public class ArtDetailFragment extends Fragment implements View.OnClickListener{
 
 
     @BindView(R.id.artImageView)ImageView mImageLabel;
@@ -30,7 +35,7 @@ public class ArtDetailFragment extends Fragment {
     @BindView(R.id.mediumTextView) TextView mMediumLabel;
     @BindView(R.id.titleTextView) TextView mTitleLabel;
     @BindView(R.id.creditLineTextView) TextView mCreditLineLabel;
-
+    @BindView(R.id.saveArtButton) Button mSaveArtButton;
 
     private Artsy mArtsies;
 
@@ -61,6 +66,22 @@ public class ArtDetailFragment extends Fragment {
         mMediumLabel.setText(mArtsies.getMedium());
         mCreditLineLabel.setText(mArtsies.getCreditLine());
 
+        mSaveArtButton.setOnClickListener(this);
+
         return view;
     }
+
+    @Override
+    public  void onClick (View view) {
+
+        if (view == mSaveArtButton) {
+            DatabaseReference artRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference(Constants.FIREBASE_CHILD_ARTS);
+            artRef.push().setValue(mArtsies);
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+        }
+    }
+    }
+
 }
