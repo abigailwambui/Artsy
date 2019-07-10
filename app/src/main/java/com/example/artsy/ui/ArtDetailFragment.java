@@ -82,6 +82,6 @@ public class ArtDetailFragment extends Fragment implements View.OnClickListener{
             Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
         }
     }
-    }
 
 }
+

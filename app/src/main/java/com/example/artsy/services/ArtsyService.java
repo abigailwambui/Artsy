@@ -53,8 +53,14 @@ public class ArtsyService {
                     String creditLine = artJSON.getString("creditline");
                     String medium = artJSON.getString("medium");
 
-                    Artsy art = new Artsy(description, primaryImageUrl, culture, title, creditLine, medium);
-                    artsies.add(art);
+                    if (primaryImageUrl.equals("")) {
+                        String secondUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7iK0y8rlPAziH4MckCK7sjQt2tU-yMABG6a-04b7Shtmlkf-1cw";
+                        Artsy art = new Artsy(description, secondUrl, culture, title, creditLine, medium);
+                        artsies.add(art);
+                    }else {
+                        Artsy art = new Artsy(description, primaryImageUrl, culture, title, creditLine, medium);
+                        artsies.add(art);
+                    }
 
                 }
 
