@@ -41,9 +41,11 @@ public class SavedArtListActivity extends AppCompatActivity {
                         .build();
 
         mFirebaseAdapter = new FirebaseRecyclerAdapter<Artsy, FirebaseArtViewHolder>(options) {
+
+
             @Override
-            protected void onBindViewHolder(@NonNull FirebaseArtViewHolder firebaseRestaurantViewHolder, int position, @NonNull Restaurant restaurant) {
-                firebaseRestaurantViewHolder.bindArtsy(artsy);
+            protected void onBindViewHolder(@NonNull FirebaseArtViewHolder firebaseArtViewHolder, int position, @NonNull Artsy artsy) {
+                firebaseArtViewHolder.bindArtsy(artsy);
             }
 
             @NonNull

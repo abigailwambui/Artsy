@@ -42,7 +42,7 @@ public class FirebaseArtViewHolder extends RecyclerView.ViewHolder implements Vi
         TextView cultureTextView = (TextView) mView.findViewById(R.id.cultureTextView);
 
 
-        Picasso.get().load(artsy.getPrimaryImageUrl()).into(mImageLabel);
+        Picasso.get().load(artsy.getPrimaryImageUrl()).into(artImageView);
 
         descriptionTextView.setText(artsy.getDescription());
         titleTextView.setText(artsy.getTitle());
@@ -76,4 +76,4 @@ public class FirebaseArtViewHolder extends RecyclerView.ViewHolder implements Vi
         });
     }
 }
-}
+

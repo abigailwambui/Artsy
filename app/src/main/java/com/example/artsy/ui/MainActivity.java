@@ -15,14 +15,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.artsy.R;
+import com.example.artsy.SavedArtListActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.welcomeButton) Button mWelcomeButton;
-    @BindView(R.id.artsyTextView) TextView mArtsyTextView;
+    @BindView(R.id.welcomeButton)
+    Button mWelcomeButton;
+    @BindView(R.id.artsyTextView)
+    TextView mArtsyTextView;
+    @BindView(R.id.savedArtsButton)
+    Button mSavedArtsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mArtsyTextView.setTypeface(adalgisaFont);
 
         mWelcomeButton.setOnClickListener(this);
+        mSavedArtsButton.setOnClickListener(this);
     }
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, ArtsActivity.class);
-                startActivity(intent);
-            }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,5 +67,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
         finish();
     }
+
+
+    @Override
+    public void onClick(View v) {
+        if (v == mWelcomeButton) {
+            Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this, ArtsActivity.class);
+            startActivity(intent);
+        }
+
+        if (v == mSavedArtsButton) {
+            Intent intent = new Intent(MainActivity.this, SavedArtListActivity.class);
+            startActivity(intent);
+        }
+
+    }
 }
+
 
