@@ -31,9 +31,24 @@
         android:text="WELCOME"
         android:id="@+id/welcomeButton"
         android:background="@color/colorPrimaryText"
+        android:visibility="visible"
+        android:layout_above="@+id/savedArtsButton"
         android:textColor="@color/colorTextIcons"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Saved Arts"
+        android:id="@+id/savedArtsButton"
+        android:background="@color/colorPrimaryText"
+        android:textColor="@color/colorTextIcons"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 
 
