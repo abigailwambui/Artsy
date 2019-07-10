@@ -5,46 +5,46 @@ import org.parceler.Parcel;
 
 @Parcel
 public class Artsy {
-     String mDescription;
-     String mPrimaryImageUrl;
-     String mCulture;
-     String mTitle;
-     String mCreditLine;
-     String mMedium;
+     String description;
+     String primaryImageUrl;
+     String culture;
+     String title;
+     String creditLine;
+     String medium;
 
 
     public Artsy() {}
 
 public Artsy(String description, String primaryImageUrl, String culture, String title, String creditLine, String medium) {
-    this.mDescription = description;
-    this.mPrimaryImageUrl = primaryImageUrl;
-    this.mCulture = culture;
-    this.mTitle = title;
-    this.mCreditLine = creditLine;
-    this.mMedium = medium;
+    this.description = description;
+    this.primaryImageUrl = primaryImageUrl;
+    this.culture = culture;
+    this.title = title;
+    this.creditLine = creditLine;
+    this.medium = medium;
 }
 
 public String getDescription() {
-        return mDescription;
+        return description;
 }
 
 public String getPrimaryImageUrl() {
-        return mPrimaryImageUrl;
+        return primaryImageUrl;
 }
 
 public String getCulture() {
-        return mCulture;
+        return culture;
 }
 
 public String getTitle() {
-        return mTitle;
+        return title;
 }
 
 public String getCreditLine() {
-        return mCreditLine;
+        return creditLine;
 }
 
 public String getMedium () {
-        return mMedium;
+        return medium;
 }
 }
